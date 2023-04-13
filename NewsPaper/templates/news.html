@@ -15,7 +15,7 @@ News
         {% for newsobj in news %}
             <h3> {{ newsobj.news_title|censor }} </h3>
             <p> {{ newsobj.create_time.date|date:'d M Y' }} </p>
-            <p> {{ newsobj.news_text|multiply:20|truncatewords:50|censor }} </p>
+            <p> {{ newsobj.news_text|multiply:20|truncatechars:50|censor }} </p>
         {% endfor %}
     {% else %}
         <h2>Новостей нет!</h2>
